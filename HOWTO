@@ -1,0 +1,9 @@
+compile and test
+----------------
+make
+./build/squeezer
+
+docs
+----
+make doc
+
