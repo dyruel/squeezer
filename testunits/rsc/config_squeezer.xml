@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InfSetupFile>
+<config>
+	<biffile name="incalin.bif" />
+	<inference type="shafer" />
+</config>
+<scenario>
+	<epochs upto="40" />
+	<follow>
+		<variable name="lo" />
+		<variable name="km" />
+	</follow>
+	<evidences>
+		<epoch t="0">
+			<hardevidence variable="km" modality="5_5" />
+			<hardevidence variable="lo" modality="14" />
+		</epoch>
+	</evidences>
+<scenario>
+</InfSetupFile>
+
+

@@ -1,0 +1,83 @@
+network aGrUM_BN {
+   property version 1.0;
+   property author aGrUM;
+}
+
+variable A_0 {
+   type discrete[2] {A, B};
+}
+
+variable B_0 {
+   type discrete[2] {j, k, l};
+}
+
+variable C_0 {
+   type discrete[2] {0, 1};
+}
+
+variable D_0 {
+   type discrete[2] {space, opera};
+}
+
+probability (A_0) {
+   default 0.5 0.5;
+}
+
+probability (B_0 | A_0, C_0) {
+   (A, 0) 0.4 0.5 0.1;
+   (B, 0) 0.5 0.1 0.4;
+   (A, 1) 0.5 0.2 0.3;
+   (B, 1) 1 0 0;
+}
+
+probability (C_0) {
+   default 0.3 0.7;
+}
+
+probability (D_0 | C_0) {
+   (0) 0.1 0.9;
+   (1) 0.9 0.1;
+}
+
+variable A_1 {
+   type discrete[2] {A, B};
+}
+
+variable B_1 {
+   type discrete[2] {j, k, l};
+}
+
+variable C_1 {
+   type discrete[2] {0, 1};
+}
+
+variable D_1 {
+   type discrete[2] {space, opera};
+}
+
+probability (B_1 | A_1, C_1) {
+   (A, 0) 0.4 0.5 0.1;
+   (B, 0) 0.5 0.1 0.4;
+   (A, 1) 0.5 0.2 0.3;
+   (B, 1) 1 0 0;
+}
+
+probability (D_1 | C_1) {
+   (0) 0.1 0.9;
+   (1) 0.9 0.1;
+}
+
+probability (A_1 | B_0, D_0) {
+   (j, space) 0.4 0.6;
+   (k, space) 0.5 0.5;
+   (l, space) 0.5 0.5;
+   (j, opera) 1 0;
+   (k, opera) 0.4 0.6;
+   (l, opera) 0.5 0.5;
+}
+
+probability (C_1 | B_0) {
+   (j) 0.1 0.9;
+   (k) 0.9 0.1;
+   (l) 1 0;
+}

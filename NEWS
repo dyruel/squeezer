@@ -1,0 +1,21 @@
+Squeezer
+
+10/04/2009
+	- Démarrage de la refactorisation
+
+24/04/2008
+	- Correction de quelques bugs
+	- Nouvau format de sortie disponible : csv (Dans le config.xml mettre <csvfile name="nom/du/fichier/csv" />)
+	- Mise en place d'exceptions
+
+
+22/04/2008
+	- Le programme génére, à partir d'un fichier XML d'entrée, un fichier XML de sortie contenant le résultat de
+	l'inférence. Attention à bien vérifier la cohérence du contenu des fichiers qui sont passés au programmme.
+
+
+19/04/2008
+	- La création d'un 2TBN à partir d'un fichier BIF, puis la création d'un DBN à partir d'un 2TBN fonctionnent.
+	Il reste à nettoyer le code et à le tester, et, éventuellement l'optimiser si possible.
+
+

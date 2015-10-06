@@ -1,0 +1,9 @@
+		<br/><br/>
+    <div class="footer">
+      <small>
+        <A href="http://agrum.lip6.fr/doku.php?id=squeezer">$projectname</A> <b>$projectnumber</b> <br/> $datetime <br/>
+        <a href="http://www.doxygen.org/index.html">DoXyGeN $doxygenversion</a>
+      </small>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+network aGrUM_BN {
+   property version 1.0;
+   property author aGrUM;
+}
+
+variable tmp_c {
+   type discrete[2] {froid, chaud};
+}
+
+variable X_0 {
+   type discrete[2] {A, B};
+}
+
+variable Y_0 {
+   type discrete[2] {j, k};
+}
+
+variable X_1 {
+   type discrete[2] {A, B};
+}
+
+variable Y_1 {
+   type discrete[2] {j, k};
+}
+
+probability (tmp_c) {
+   default 0.5 0.5;
+}
+
+probability (X_0 | tmp_c) {
+   (froid) 0.5 0.5;
+   (chaud) 0.1 0.9;
+}
+
+probability (Y_0 | X_0) {
+   (A) 0.6 0.4;
+   (B) 0.2 0.8;
+}
+
+probability (X_1 | X_0, tmp_c) {
+   (A, froid) 0.8 0.2;
+   (B, froid) 0.2 0.8;
+   (A, chaud) 0.5 0.5;
+   (B, chaud) 0.5 0.5;
+}
+
+probability (Y_1 | X_1) {
+   (A) 0.6 0.4;
+   (B) 0.2 0.8;
+}
